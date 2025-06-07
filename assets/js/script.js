@@ -1,4 +1,2 @@
-// Basic JS for interactivity
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Welcome to Nexon Quantum 🚀");
-});
+// Future animation or navbar logic
+console.log("Nexon Quantum - Website Loaded");
