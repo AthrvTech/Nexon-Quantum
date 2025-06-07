@@ -1,2 +1,4 @@
-// Future animations or scroll effects
-console.log("Welcome to Nexon Quantum!");
+// Basic JS for interactivity
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Welcome to Nexon Quantum 🚀");
+});
