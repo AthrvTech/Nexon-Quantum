@@ -1,62 +1,74 @@
-  .navbar {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #003B46, #66A5AD); /* Deep Aqua to Wave */
+  color: white; /* Text white only */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
   align-items: center;
-  background: #001f3f;
-  padding: 12px 20px;
-  position: relative;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.nav-left img.logo {
-  width: 40px;
+header {
+  margin-bottom: 40px;
 }
 
-.nav-toggle {
-  font-size: 28px;
-  color: white;
-  display: none;
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+  color: white; /* Strict white text */
+}
+
+.tagline {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: white; /* Strict white text */
+}
+
+.cta-button {
+  background-color: #07575B; /* Ocean */
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #C4DFE6; /* Seafoam */
+  border-radius: 30px;
   cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+.cta-button:hover {
+  background-color: #C4DFE6; /* Seafoam */
+  color: #07575B; /* Ocean */
+  transform: scale(1.05);
 }
 
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+footer {
+  margin-top: auto;
+  padding: 15px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: white; /* Footer text white */
 }
 
-.nav-links li a.active,
-.nav-links li a:hover {
-  color: #00c4ff;
-}
-
-/* Responsive navbar */
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block;
+@media (max-width: 480px) {
+  .logo {
+    font-size: 2rem;
   }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #001f3f;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 8px;
+  .tagline {
+    font-size: 1rem;
   }
-
-  .nav-links.show {
-    display: flex;
-  }
-
-  .nav-links li {
-    margin-bottom: 10px;
+  .cta-button {
+    padding: 12px 28px;
+    font-size: 1rem;
   }
 }
