@@ -9,16 +9,20 @@
 <body>
 
   <header>
-    <nav>
+  <nav class="navbar">
+    <div class="nav-left">
       <img src="images/logo.png" alt="Logo" class="logo" />
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    </div>
+    <div class="nav-toggle" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <section class="hero">
     <div class="hero-text">
