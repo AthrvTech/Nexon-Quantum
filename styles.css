@@ -1,74 +1,117 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* Animated gradient background keyframes */
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #003B46, #66A5AD); /* Deep Aqua to Wave */
-  color: white; /* Text white only */
+  background: #003B46; /* fallback */
+  color: white;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.hero-section {
+  height: 80vh;
+  display: flex;
   justify-content: center;
   align-items: center;
+
+  background: linear-gradient(-45deg, #003B46, #66A5AD, #07575B, #66A5AD);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   text-align: center;
   padding: 0 20px;
 }
 
-header {
-  margin-bottom: 40px;
+.hero-content {
+  max-width: 700px;
 }
 
-.logo {
-  font-size: 2.5rem;
+.hero-logo {
+  font-size: 3.5rem;
   font-weight: 700;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-  color: white; /* Strict white text */
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  animation: fadeSlideIn 1.5s ease forwards;
+  opacity: 0;
 }
 
-.tagline {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
+.hero-tagline {
+  font-size: 1.6rem;
+  margin-bottom: 40px;
   font-weight: 500;
-  color: white; /* Strict white text */
+  animation: fadeSlideIn 1.5s ease 0.5s forwards;
+  opacity: 0;
 }
 
 .cta-button {
-  background-color: #07575B; /* Ocean */
+  background-color: #07575B;
   border: none;
-  padding: 15px 35px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #C4DFE6; /* Seafoam */
-  border-radius: 30px;
+  padding: 18px 45px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #C4DFE6;
+  border-radius: 40px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 0 10px #66A5AD88;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.4s ease;
+  animation: fadeSlideIn 1.5s ease 1s forwards;
+  opacity: 0;
 }
 
 .cta-button:hover {
-  background-color: #C4DFE6; /* Seafoam */
-  color: #07575B; /* Ocean */
-  transform: scale(1.05);
+  background-color: #C4DFE6;
+  color: #07575B;
+  box-shadow: 0 0 20px #C4DFE6;
+  transform: scale(1.07);
+}
+
+/* Fade and slide animation */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 footer {
-  margin-top: auto;
   padding: 15px;
   font-size: 0.9rem;
   opacity: 0.8;
-  color: white; /* Footer text white */
+  color: white;
+  text-align: center;
+  background: #003B46;
 }
 
+/* Responsive */
 @media (max-width: 480px) {
-  .logo {
-    font-size: 2rem;
+  .hero-logo {
+    font-size: 2.4rem;
+    letter-spacing: 5px;
   }
-  .tagline {
-    font-size: 1rem;
+  .hero-tagline {
+    font-size: 1.2rem;
   }
   .cta-button {
-    padding: 12px 28px;
+    padding: 14px 35px;
     font-size: 1rem;
   }
 }
