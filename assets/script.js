@@ -1,2 +1,4 @@
-// Future animation or navbar logic
-console.log("Nexon Quantum - Website Loaded");
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("show");
+}
